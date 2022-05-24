@@ -82,7 +82,7 @@ function Login(props) {
   return (
     <>
       <div className="App">
-        {isSubmitted ? <Dashboard logout={logout} /> : LoginForm}
+        {isSubmitted ? <Dashboard logout={logout} database={database} /> : LoginForm}
       </div>
     </>
   );
