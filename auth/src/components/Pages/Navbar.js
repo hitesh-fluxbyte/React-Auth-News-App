@@ -7,7 +7,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <NavLink to="/dashboard" className="navbar-brand">
-            Dashboard
+            Home
           </NavLink>
           <button
             className="navbar-toggler"

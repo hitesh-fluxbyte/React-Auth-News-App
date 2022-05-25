@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../Layout/Navlink";
 
-function Logout(props) {
+function Logout() {
   const navigate = useNavigate();
   const handleLogout = () => {
     navigate("/");
-    console.log("Called");
+    console.log("User LogOut");
   };
   return (
     <div className="App">

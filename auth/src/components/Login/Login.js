@@ -44,13 +44,17 @@ function Login(props) {
       if (userData.password !== pass.value) {
         // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
+        console.log("Please Enter Correct Details")
       } else {
         // setIsSubmitted(true);
-        navigate("/dashboard");
+        const log =  navigate("/dashboard");
+        console.log(log)
+        console.log("User Logged In" );
       }
     } else {
       // Username not found
       setErrorMessages({ name: "uname", message: errors.uname });
+      console.log("Please Enter Correct Details")
     }
   };
 
@@ -82,7 +86,11 @@ function Login(props) {
   return (
     <>
       <div className="App">
-        {isSubmitted ? <Dashboard logout={logout} database={database} /> : LoginForm}
+        {isSubmitted ? (
+          <Dashboard logout={logout} database={database} />
+        ) : (
+          LoginForm
+        )}
       </div>
     </>
   );
