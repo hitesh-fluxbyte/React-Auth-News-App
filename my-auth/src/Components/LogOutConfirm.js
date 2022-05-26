@@ -12,7 +12,7 @@ function LogOutConfirm(props) {
       <button className="btn btn-secondary" onClick={props.onClose}>
         Cancel
       </button>
-      <button className="btn btn-danger" onClick={handleLogout}>
+      <button className="btn btn-danger mx-2" onClick={handleLogout}>
         Confirm
       </button>
     </div>
