@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import LogOutConfirm from "./LogOutConfirm";
+import LogoutDrop from "./LogoutDrop";
 
 function Navbar() {
+  const [showLogOut, setshowLogOut] = useState();
+
+  function showLogOutHandler() {
+    setshowLogOut(true);
+  }
+
+  function closeLogOutHandler() {
+    setshowLogOut(false);
+  }
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light container my-2">
@@ -37,9 +48,11 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/news/logout">
-                  Logout
-                </NavLink>
+                <div>
+                  <button onClick={showLogOutHandler} className="nav-link btn">
+                    Logout
+                  </button>
+                </div>
               </li>
             </ul>
             <form className="d-flex">
@@ -56,6 +69,10 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      {showLogOut && <LogoutDrop onClick={closeLogOutHandler} />}
+      {showLogOut && (
+        <LogOutConfirm text="Are you sure?" onClose={closeLogOutHandler} />
+      )}
     </>
   );
 }
