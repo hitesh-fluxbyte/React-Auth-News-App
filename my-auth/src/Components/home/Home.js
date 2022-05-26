@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import About from "./About";
-import Contact from "./Contact";
-import Login from "./Login";
-import NoPage from "./NoPage";
-import Layout from "./Layout";
-import News from "../News/News";
+import About from "../about/About";
+import Contact from "../contact/Contact";
+import Login from "../login/Login";
+import NoPage from "../nopage/NoPage";
+import Layout from "../../@shared/Layout";
+import News from "../news/News";
 
 function Home() {
   return (

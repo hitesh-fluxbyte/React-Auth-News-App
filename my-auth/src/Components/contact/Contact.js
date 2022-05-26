@@ -1,12 +1,17 @@
 import React from "react";
-const Contact = (props) => {
+const Contact = () => {
+  // let handleLogin = (event) => {
+  //   event.preventDefault();
+  //   console.log(event.target.username.value);
+  // };
+
   return (
     <>
       <h2 className="container">Contact Us</h2>
       <form className="container">
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-            Email address
+            Email Address
           </label>
           <input
             type="email"
@@ -28,18 +33,9 @@ const Contact = (props) => {
             id="exampleInputPassword1"
           />
         </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" htmlFor="exampleCheck1">
-            Check me out
-          </label>
-        </div>
         <button type="submit" className="btn btn-primary">
           Submit
+          {/* onClick={handleLogin} */}
         </button>
       </form>
     </>
