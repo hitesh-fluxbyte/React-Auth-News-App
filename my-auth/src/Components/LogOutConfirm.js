@@ -2,9 +2,14 @@ import { useNavigate } from "react-router-dom";
 
 function LogOutConfirm(props) {
   const navigate = useNavigate();
+
   const handleLogout = () => {
     navigate("/");
     console.log("User LogOut");
+
+    // Remove data form local storage
+    localStorage.removeItem("Username");
+    localStorage.removeItem("Password");
   };
   return (
     <div className="container">

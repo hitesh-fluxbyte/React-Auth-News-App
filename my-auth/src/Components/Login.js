@@ -4,6 +4,8 @@ import Home from "./Home";
 
 function Login() {
   const navigate = useNavigate();
+  // const [name, setName] = useState("");
+  // const [psw, setPsw] = useState("");
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   // Database
@@ -35,6 +37,7 @@ function Login() {
     let { uname, pass } = document.forms[0];
 
     const userData = database.find((user) => user.username === uname.value);
+    console.log(userData)
 
     // Compare user info
     if (userData) {
@@ -46,12 +49,19 @@ function Login() {
         setIsSubmitted(true);
         navigate("/news");
         console.log("User Logged In");
+        storeData(userData);
       }
     } else {
       // Username not found
       setErrorMessages({ name: "uname", message: errors.uname });
       console.log(errors.uname);
     }
+  };
+
+  // Store data to local storage
+  const storeData = (data) => {
+    localStorage.setItem("Username", data.username);
+    localStorage.setItem("Password", data.password);
   };
 
   const LoginForm = (
@@ -67,8 +77,11 @@ function Login() {
         {renderErrorMessage("pass")}
       </div>
       <div className="container">
-        <button className=" btn btn-primary submitBtn my-2" type="submit">
-          Submit
+        <button
+          className=" btn btn-success submitBtn my-2"
+          type="submit"
+        >
+          Login
         </button>
       </div>
     </form>
