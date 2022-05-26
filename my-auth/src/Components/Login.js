@@ -44,7 +44,7 @@ function Login() {
         console.log(errors.pass);
       } else {
         setIsSubmitted(true);
-        navigate("/home");
+        navigate("/news");
         console.log("User Logged In");
       }
     } else {

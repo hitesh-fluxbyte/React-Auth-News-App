@@ -6,8 +6,8 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light container my-2">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/home">
-            Home
+          <NavLink className="navbar-brand" to="/news">
+            News
           </NavLink>
           <button
             className="navbar-toggler"
@@ -26,18 +26,18 @@ function Navbar() {
                 <NavLink
                   className="nav-link active"
                   aria-current="page"
-                  to="/home/contact"
+                  to="/news/contact"
                 >
                   Contact
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/home/about">
+                <NavLink className="nav-link" to="/news/about">
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/home/logout">
+                <NavLink className="nav-link" to="/news/logout">
                   Logout
                 </NavLink>
               </li>
