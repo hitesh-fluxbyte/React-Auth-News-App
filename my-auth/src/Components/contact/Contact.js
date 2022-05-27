@@ -33,7 +33,7 @@ const Contact = () => {
             id="exampleInputPassword1"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-dark">
           Submit
           {/* onClick={handleLogin} */}
         </button>

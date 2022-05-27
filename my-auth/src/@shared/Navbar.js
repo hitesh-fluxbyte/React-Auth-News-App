@@ -16,7 +16,7 @@ function Navbar() {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary container my-2">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark container my-2">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/news">
             News
