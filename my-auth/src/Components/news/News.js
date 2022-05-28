@@ -12,9 +12,11 @@ class News extends Component {
     };
   }
 
+  apiKey = process.env.REACT_APP_NEWS_API
+
   async componentDidMount() {
     let url =
-      "https://newsapi.org/v2/everything?q=apple&from=2022-05-25&to=2022-05-25&sortBy=popularity&apiKey=87e97c6268d3430fa215a9518b0e89a8&page=1&pageSize=20";
+      `https://newsapi.org/v2/everything?q=apple&from=2022-05-25&to=2022-05-25&sortBy=popularity&apiKey=${this.apiKey}&page=1&pageSize=20`;
     let data = await fetch(url);
     let parseData = await data.json();
     console.log(parseData);
@@ -24,7 +26,7 @@ class News extends Component {
   handleNextClick = async () => {
     console.log("next Clicked");
 
-    let url = `https://newsapi.org/v2/everything?q=apple&from=2022-05-25&to=2022-05-25&sortBy=popularity&apiKey=87e97c6268d3430fa215a9518b0e89a8&page=${
+    let url = `https://newsapi.org/v2/everything?q=apple&from=2022-05-25&to=2022-05-25&sortBy=popularity&apiKey=${this.apiKey}&page=${
       this.state.page + 1
     }&pageSize=20`;
     let data = await fetch(url);
@@ -38,7 +40,7 @@ class News extends Component {
 
   handlePreviousClick = async () => {
     console.log("Previous Clicked");
-    let url = `https://newsapi.org/v2/everything?q=apple&from=2022-05-25&to=2022-05-25&sortBy=popularity&apiKey=87e97c6268d3430fa215a9518b0e89a8&page=${
+    let url = `https://newsapi.org/v2/everything?q=apple&from=2022-05-25&to=2022-05-25&sortBy=popularity&apiKey=${this.apiKey}&page=${
       this.state.page - 1
     }&pageSize=20`;
     let data = await fetch(url);
