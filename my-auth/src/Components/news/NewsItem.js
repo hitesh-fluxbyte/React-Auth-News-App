@@ -1,6 +1,5 @@
 import React from "react";
 
-
 // Function Based Components
 function NewsItem(props) {
   let { title, description, imageUrl, newsUrl } = props;
@@ -44,7 +43,6 @@ function NewsItem(props) {
 }
 
 export default NewsItem;
-
 
 // Class Based Components
 // class NewsItem  extends Component = (props) => {

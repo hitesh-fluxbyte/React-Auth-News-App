@@ -1,10 +1,5 @@
 import React from "react";
 const Contact = () => {
-  // let handleLogin = (event) => {
-  //   event.preventDefault();
-  //   console.log(event.target.username.value);
-  // };
-
   return (
     <>
       <h2 className="container">Contact Us</h2>
@@ -35,7 +30,6 @@ const Contact = () => {
         </div>
         <button type="submit" className="btn btn-dark">
           Submit
-          {/* onClick={handleLogin} */}
         </button>
       </form>
     </>

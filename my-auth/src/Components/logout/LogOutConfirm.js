@@ -13,7 +13,9 @@ function LogOutConfirm(props) {
   };
   return (
     <div className="container">
-      <h4 className="container my-4">Are You Sure!! Do You Want To LogOut!!!</h4>
+      <h4 className="container my-4">
+        Are You Sure!! Do You Want To LogOut!!!
+      </h4>
       <button className="btn btn-secondary" onClick={props.onClose}>
         Cancel
       </button>

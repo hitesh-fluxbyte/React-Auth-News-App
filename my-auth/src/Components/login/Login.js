@@ -4,10 +4,9 @@ import Home from "../home/Home";
 
 function Login() {
   const navigate = useNavigate();
-  // const [name, setName] = useState("");
-  // const [psw, setPsw] = useState("");
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+
   // Database
   const database = [
     {
@@ -37,7 +36,7 @@ function Login() {
     let { uname, pass } = document.forms[0];
 
     const userData = database.find((user) => user.username === uname.value);
-    console.log(userData)
+    console.log(userData);
 
     // Compare user info
     if (userData) {
@@ -77,10 +76,7 @@ function Login() {
         {renderErrorMessage("pass")}
       </div>
       <div className="container">
-        <button
-          className=" btn btn-success submitBtn my-2"
-          type="submit"
-        >
+        <button className=" btn btn-success submitBtn my-2" type="submit">
           Login
         </button>
       </div>

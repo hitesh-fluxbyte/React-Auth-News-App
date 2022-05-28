@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import LogOutConfirm from '../Components/logout/LogOutConfirm';
-import LogoutDrop from '../Components/logout/LogoutDrop';
-
+import LogOutConfirm from "../Components/logout/LogOutConfirm";
+import LogoutDrop from "../Components/logout/LogoutDrop";
 
 function Navbar() {
   const [showLogOut, setshowLogOut] = useState();
@@ -50,7 +49,10 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <div>
-                  <button onClick={showLogOutHandler} className="nav-link btn active">
+                  <button
+                    onClick={showLogOutHandler}
+                    className="nav-link btn active"
+                  >
                     Logout
                   </button>
                 </div>
